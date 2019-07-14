@@ -25,7 +25,6 @@ const defaultConf = env => {
   const mode = production ? 'production' : 'development'
   return {
     mode,
-    target: 'web',
     devtool: production ? 'source-map' : development && 'cheap-module-source-map',
     plugins: [
       new HtmlWebpackPlugin(
@@ -113,7 +112,7 @@ module.exports = (env = {}) => {
         path: path.resolve(__dirname, '../public'),
         filename: 'renderer.js'
       },
-      target: 'electron-renderer'
+      target: 'web',
     }
   ]
 }
