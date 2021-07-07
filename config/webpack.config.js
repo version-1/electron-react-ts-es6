@@ -112,7 +112,7 @@ module.exports = (env = {}) => {
         path: path.resolve(__dirname, '../public'),
         filename: 'renderer.js'
       },
-      target: 'web',
+      target: 'electron-renderer',
     }
   ]
 }
